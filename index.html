@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Minimal Test Site</title>
+  <link rel="stylesheet" href="styles/base.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="header__left-block">
+      <img class="header__burger-icon" src="./assets/icons/burger.svg" alt="burger icon">
+      <button class="create-btn btn btn-primary text-regular">
+        <img class="create-btn__plus-icon" src="./assets/icons/plus.svg" alt="create button icon">
+        Create
+      </button>
+    </div>
+    <span class="header__logo-text primary-color">2WIN</span>
+    <img class="header__logo-image" src="./assets/imgs/dean.jpg" alt="logo image">
+  </header>
+  <main class="main primary-bg">
+    <section class="section">
+      <header class="section__header">
+        <div class="section__header-breadcrumbs">
+          <span class="text-big primary-color">My quizzes</span>
+          <img class="section__header-rect" src="./assets/icons/rect.svg" alt="rect icon">
+          <h5 class="section__folder-name text-big text-bold white-color">Folder name</h5>
+        </div>
+        <div class="section__header-btns">
+          <button class="section__header-sort-btn btn btn-primary--outlined text-regular">
+            <img class="section__header-sort-icon" src="./assets/icons/dark-blue-plus.svg" alt="plus icon">
+            Sort by
+          </button>
+          <button class="section__header-subfolder-btn btn btn-primary text-regular">
+            <img class="section__header-subfolder-icon" src="./assets/icons/plus.svg" alt="plus icon">
+            Add new subfolder
+          </button>
+        </div>
+      </header>
+      <div class="cards-list">
+        <card class="card primary-blue-color">
+          <div class="card__title-block">
+            <img class="card__img" src="./assets/imgs/card-preview-1.png" alt="card image">
+            <h5 class="card__title text-bold text-regular">Quiz name. Ready to turn your ambitions into achievements –
+              Moderation 2</h5>
+          </div>
+          <div class="card__stats">
+            <div class="card__stat-item">
+              <img class="card__stat-icon" src="./assets/icons/calendar-dates.svg" alt="calendar dates icon">
+              <span class="card__stat-text text-regular text-small">31.01.2025</span>
+            </div>
+            <div class="card__stat-item">
+              <div class="card__stat-item-child">
+                <img class="card__stat-icon" src="./assets/icons/bar-chart.svg" alt="bar chart icon">
+                <span class="card__stat-text text-regular text-small">23</span>
+              </div>
+              <div class="card__stat-item-stars">
+                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+              </div>
+            </div>
+          </div>
+          <div class="card__tags-block">
+            <span class="card__tags text-small">History / Europe History / Ukraine</span>
+          </div>
+          <div class="card__moderation-block">
+            <div class="card__moderation-info">
+              <span class="badge badge--orange text-tiny text-bold">Moderate on 66%</span>
+              <div class="card__moderation-info-started">
+                <span class="card__moderation-text text-small light-color">Started</span>
+                <span class="card__moderation-text text-small primary-blue-color">20.02.2024</span>
+              </div>
+            </div>
+            <div class="card__moderator">
+              <img class="card__moderator-avatar" src="./assets/imgs/sam.png" alt="moderator avatar">
+              <div class="card__moderator-info">
+                <span class="card__moderator-name text-regular primary-blue-color">Sam Winchester</span>
+                <span class="card__moderator-position text-small light-color">Beginner Moderator</span>
+              </div>
+            </div>
+          </div>
+          <div class="card__btns-block">
+            <button class="card__moderation-btn btn btn-bordered-outlined">
+              <img class="card__moderation-btn-icon" src="./assets/icons/link.svg" alt="link icon">
+            </button>
+            <button class="card__moderation-btn btn btn-bordered-outlined text-regular primary-blue-color">
+              <img class="card__moderation-btn-icon" src="./assets/icons/comment-text.svg" alt="link icon">
+              Comments & rates
+            </button>
+            <button class="card__moderation-btn btn btn-bordered-outlined">
+              <img class="card__moderation-btn-icon" src="./assets/icons/pencil-edit.svg" alt="pencil edit icon">
+            </button>
+            <button class="card__moderation-btn btn btn-bordered-outlined">
+              <img class="card__moderation-btn-icon" src="./assets/icons/more-vertical.svg" alt="more icon">
+            </button>
+          </div>
+        </card>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="src/index.js"></script>
+</body>
+
+</html>
