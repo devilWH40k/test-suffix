@@ -1,3 +1,3 @@
-import { CARD_DATA } from "./constants/cardData.js";
+import { initApp } from "./core/core.js";
 
-console.log(CARD_DATA);
+initApp();

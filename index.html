@@ -4,105 +4,507 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Minimal Test Site</title>
+  <title>2WIN</title>
   <link rel="stylesheet" href="styles/base.css">
+  <link rel="stylesheet" href="styles/adaptives.css">
 </head>
 
 <body>
   <header class="header">
     <div class="header__left-block">
-      <img class="header__burger-icon" src="./assets/icons/burger.svg" alt="burger icon">
+      <div class="burger" id="burger-icon">
+        <div class="burger__bar"></div>
+        <div class="burger__bar"></div>
+        <div class="burger__bar"></div>
+      </div>
       <button class="create-btn btn btn-primary text-regular">
         <img class="create-btn__plus-icon" src="./assets/icons/plus.svg" alt="create button icon">
         Create
       </button>
+      <span class="header__logo-text-desktop primary-color">2WIN</span>
     </div>
     <span class="header__logo-text primary-color">2WIN</span>
+    <ul class="header__nav-desktop">
+      <li class="header__nav-desktop-item">
+        <a class="header__nav-desktop-link text-big text-bold primary-color" href="#">Home</a>
+      </li>
+      <li class="header__nav-desktop-item">
+        <a class="header__nav-desktop-link text-big text-bold primary-color" href="#">Materials for Quiz</a>
+      </li>
+      <li class="header__nav-desktop-item">
+        <a class="header__nav-desktop-link text-big text-bold primary-color" href="#">Feedback</a>
+      </li>
+    </ul>
     <img class="header__logo-image" src="./assets/imgs/dean.jpg" alt="logo image">
   </header>
-  <main class="main primary-bg">
-    <section class="section">
-      <header class="section__header">
-        <div class="section__header-breadcrumbs">
-          <span class="text-big primary-color">My quizzes</span>
-          <img class="section__header-rect" src="./assets/icons/rect.svg" alt="rect icon">
-          <h5 class="section__folder-name text-big text-bold white-color">Folder name</h5>
-        </div>
-        <div class="section__header-btns">
-          <button class="section__header-sort-btn btn btn-primary--outlined text-regular">
-            <img class="section__header-sort-icon" src="./assets/icons/dark-blue-plus.svg" alt="plus icon">
-            Sort by
-          </button>
-          <button class="section__header-subfolder-btn btn btn-primary text-regular">
-            <img class="section__header-subfolder-icon" src="./assets/icons/plus.svg" alt="plus icon">
-            Add new subfolder
-          </button>
-        </div>
-      </header>
-      <div class="cards-list">
-        <card class="card primary-blue-color">
-          <div class="card__title-block">
-            <img class="card__img" src="./assets/imgs/card-preview-1.png" alt="card image">
-            <h5 class="card__title text-bold text-regular">Quiz name. Ready to turn your ambitions into achievements –
-              Moderation 2</h5>
-          </div>
-          <div class="card__stats">
-            <div class="card__stat-item">
-              <img class="card__stat-icon" src="./assets/icons/calendar-dates.svg" alt="calendar dates icon">
-              <span class="card__stat-text text-regular text-small">31.01.2025</span>
-            </div>
-            <div class="card__stat-item">
-              <div class="card__stat-item-child">
-                <img class="card__stat-icon" src="./assets/icons/bar-chart.svg" alt="bar chart icon">
-                <span class="card__stat-text text-regular text-small">23</span>
-              </div>
-              <div class="card__stat-item-stars">
-                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
-                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
-                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
-                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
-                <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
-              </div>
-            </div>
-          </div>
-          <div class="card__tags-block">
-            <span class="card__tags text-small">History / Europe History / Ukraine</span>
-          </div>
-          <div class="card__moderation-block">
-            <div class="card__moderation-info">
-              <span class="badge badge--orange text-tiny text-bold">Moderate on 66%</span>
-              <div class="card__moderation-info-started">
-                <span class="card__moderation-text text-small light-color">Started</span>
-                <span class="card__moderation-text text-small primary-blue-color">20.02.2024</span>
-              </div>
-            </div>
-            <div class="card__moderator">
-              <img class="card__moderator-avatar" src="./assets/imgs/sam.png" alt="moderator avatar">
-              <div class="card__moderator-info">
-                <span class="card__moderator-name text-regular primary-blue-color">Sam Winchester</span>
-                <span class="card__moderator-position text-small light-color">Beginner Moderator</span>
-              </div>
-            </div>
-          </div>
-          <div class="card__btns-block">
-            <button class="card__moderation-btn btn btn-bordered-outlined">
-              <img class="card__moderation-btn-icon" src="./assets/icons/link.svg" alt="link icon">
-            </button>
-            <button class="card__moderation-btn btn btn-bordered-outlined text-regular primary-blue-color">
-              <img class="card__moderation-btn-icon" src="./assets/icons/comment-text.svg" alt="link icon">
-              Comments & rates
-            </button>
-            <button class="card__moderation-btn btn btn-bordered-outlined">
-              <img class="card__moderation-btn-icon" src="./assets/icons/pencil-edit.svg" alt="pencil edit icon">
-            </button>
-            <button class="card__moderation-btn btn btn-bordered-outlined">
-              <img class="card__moderation-btn-icon" src="./assets/icons/more-vertical.svg" alt="more icon">
-            </button>
-          </div>
-        </card>
+  <div class="main-content-block">
+    <div class="sidebar primary-blue-bg">
+      <div class="sidebar__header">
+        <button class="sidebar__close" aria-label="Close menu">
+          <img src="./assets/icons/close.svg" alt="close icon">
+        </button>
       </div>
-    </section>
-  </main>
+
+      <nav class="sidebar__nav">
+        <ul class="sidebar__list">
+          <li class="sidebar__item sidebar__item--active">
+            <svg class="sidebar__icon">
+              <use href="/assets/icons/sidebar-icons.svg#sidebar-quiz"></use>
+            </svg>
+            <span class="sidebar__text text-regular white-color">My quizzes</span>
+          </li>
+          <li class="sidebar__item">
+            <svg class="sidebar__icon">
+              <use href="/assets/icons/sidebar-icons.svg#sidebar-completed"></use>
+            </svg>
+            <span class="sidebar__text text-regular white-color">Completed quizzes</span>
+          </li>
+          <li class="sidebar__item">
+            <svg class="sidebar__icon">
+              <use href="/assets/icons/sidebar-icons.svg#sidebar-folder"></use>
+            </svg>
+            <span class="sidebar__text text-regular white-color">Manage quiz folders</span>
+          </li>
+          <li class="sidebar__item">
+            <svg class="sidebar__icon">
+              <use href="/assets/icons/sidebar-icons.svg#sidebar-trash"></use>
+            </svg>
+            <span class="sidebar__text text-regular white-color">Trash</span>
+          </li>
+          <li class="sidebar__divider"></li>
+          <li class="sidebar__item">
+            <svg class="sidebar__icon">
+              <use href="/assets/icons/sidebar-icons.svg#sidebar-profile"></use>
+            </svg>
+            <span class="sidebar__text text-regular white-color">My profile</span>
+          </li>
+          <li class="sidebar__divider"></li>
+          <li class="sidebar__item">
+            <svg class="sidebar__icon">
+              <use href="/assets/icons/sidebar-icons.svg#sidebar-exit"></use>
+            </svg>
+            <span class="sidebar__text text-regular white-color">Exit</span>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="sidebar__profile text-small">
+        <div class="sidebar__profile-user-info">
+          <img src="./assets/imgs/dean.png" alt="User avatar">
+          <div class="sidebar__user-info-block">
+            <div class="sidebar__user-name text-regular text-bold">User Name</div>
+            <div class="sidebar__user-role">User</div>
+          </div>
+        </div>
+        <div class="sidebar__profile-info">
+          <div class="sidebar__profile-rating">
+            <img src="./assets/icons/sidebar-pencil-create.svg" alt="pencil icon">
+            <span class="sidebar__profile-label">Author rating</span>
+            <span class="sidebar__profile-points text-bold">1190 points</span>
+          </div>
+          <div class="sidebar__profile-rating">
+            <img src="./assets/icons/sidebar-thumbs-up.svg" alt="pencil icon">
+            <span class="sidebar__profile-label">User rating</span>
+            <span class="sidebar__profile-points text-bold">353 points, 31.87%</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="sidebar__minimize-block">
+        <div class="sidebar__half-divider"></div>
+        <button class="sidebar__minimize-btn">
+          <img class="sidebar__minimize-btn-icon" src="./assets/icons/sidebar-minimize-arrow.svg"
+            alt="minimize arrow icon">
+          <span class="sidebar__minimize-btn-text text-regular light-color">Minimize</span>
+        </button>
+      </div>
+
+      <li class="sidebar__item sidebar__item-trash-desktop">
+        <svg class="sidebar__icon">
+          <use href="/assets/icons/sidebar-icons.svg#sidebar-exit"></use>
+        </svg>
+        <span class="sidebar__text text-regular white-color">Exit</span>
+      </li>
+    </div>
+    <main class="main primary-bg">
+      <section class="section">
+        <header class="section__header">
+          <div class="section__header-breadcrumbs">
+            <span class="text-big primary-color">My quizzes</span>
+            <img class="section__header-rect" src="./assets/icons/rect.svg" alt="rect icon">
+            <h5 class="section__folder-name text-big text-bold white-color">Folder name</h5>
+          </div>
+          <div class="section__header-btns">
+            <button class="section__header-sort-btn btn btn-primary--outlined text-regular">
+              <img class="section__header-sort-icon" src="./assets/icons/dark-blue-plus.svg" alt="plus icon">
+              Sort by
+            </button>
+            <button class="section__header-subfolder-btn btn btn-primary text-regular">
+              <img class="section__header-subfolder-icon" src="./assets/icons/plus.svg" alt="plus icon">
+              Add new subfolder
+            </button>
+          </div>
+        </header>
+        <div class="section__sort-view-panel">
+          <ul class="section__sort-options-list">
+            <li class="section__sort-options-item">
+              <button class="section__sort-options-button">
+                <span class="section__sort-options-button-text text-small primary-color">Quiz name</span>
+                <img class="section__sort-options-button-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </li>
+            <li class="section__sort-options-item">
+              <button class="section__sort-options-button">
+                <span class="section__sort-options-button-text text-small primary-color">Results and rating</span>
+                <img class="section__sort-options-button-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </li>
+            <li class="section__sort-options-item">
+              <button class="section__sort-options-button">
+                <span class="section__sort-options-button-text text-small primary-color">Created</span>
+                <img class="section__sort-options-button-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </li>
+            <li class="section__sort-options-item">
+              <button class="section__sort-options-button">
+                <span class="section__sort-options-button-text text-small primary-color">Category</span>
+                <img class="section__sort-options-button-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </li>
+            <li class="section__sort-options-item">
+              <button class="section__sort-options-button">
+                <span class="section__sort-options-button-text text-small primary-color">Moderation status</span>
+                <img class="section__sort-options-button-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </li>
+            <li class="section__sort-options-item">
+              <button class="section__sort-options-button">
+                <span class="section__sort-options-button-text text-small primary-color">Moderation date</span>
+                <img class="section__sort-options-button-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </li>
+            <li class="section__sort-options-item">
+              <button class="section__sort-options-button">
+                <span class="section__sort-options-button-text text-small primary-color">Last moderation by</span>
+                <img class="section__sort-options-button-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </li>
+          </ul>
+          <div class="section__view-panel">
+            <button class="section__view-panel-btn section__view-panel-btn--table">
+              <svg class="section__view-panel-table-icon">
+                <use href="/assets/icons/view-panel-icons.svg#view-panel-table"></use>
+              </svg>
+            </button>
+            <button class="section__view-panel-btn section__view-panel-btn--cards active">
+              <svg class="section__view-panel-grid-icon">
+                <use href="/assets/icons/view-panel-icons.svg#view-panel-grid"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
+        <div class="cards-list"></div>
+
+        <div class="grid-table primary-blue-color">
+
+          <div class="grid-table__row grid-table__row--head white-bg">
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Quiz name</span>
+                <img class="grid-table__cell-btn-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </div>
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Results and
+                  rating</span>
+                <img class="grid-table__cell-btn-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </div>
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Created</span>
+                <img class="grid-table__cell-btn-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </div>
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Category</span>
+                <img class="grid-table__cell-btn-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </div>
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Moderation
+                  status</span>
+                <img class="grid-table__cell-btn-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </div>
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Moderation date</span>
+                <img class="grid-table__cell-btn-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </div>
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Last moderation
+                  by</span>
+                <img class="grid-table__cell-btn-icon" src="./assets/icons/sort-options-arrow.svg"
+                  alt="sort options arrow">
+              </button>
+            </div>
+            <div class="grid-table__cell grid-table__cell--head text-bold text-regular">
+              <button class="grid-table__cell-btn">
+                <span class="grid-table__cell-btn-text primary-blue-color text-bold text-regular">Actions</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="grid-table__row">
+            <div class="grid-table__cell">
+              <div class="quiz-name-block">
+                <img class="quiz-name-block__img" src="./assets/imgs/card-preview-1.png" alt="quiz preview">
+                <button class="quiz-name-block__link-btn btn btn-bordered-outlined">
+                  <img class="quiz-name-block__link-btn-icon" src="./assets/icons/link.svg" alt="link icon" />
+                </button>
+                <h4 class="quiz-name-block__name">Quiz name. Lorem ipsum dummy - Moderation 2</h4>
+              </div>
+            </div>
+            <div class="grid-table__cell">
+              <div class="card__stat-item">
+                <div class="card__stat-item-child">
+                  <img src="./assets/icons/bar-chart.svg" alt="bar chart icon" class="card__stat-icon">
+                  <span class="card__stat-text text-regular text-small">23</span>
+                </div>
+                <div class="card__stat-item-stars">
+                  <img src="./assets/icons/filled-star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/filled-star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                </div>
+              </div>
+            </div>
+            <div class="grid-table__cell">31.01.2025</div>
+            <div class="grid-table__cell">
+              <span class="category-text">
+                History / Europe History / Ukraine
+              </span>
+            </div>
+            <div class="grid-table__cell">
+              <span class="badge badge--orange text-tiny text-bold">Moderate on 75%</span>
+            </div>
+            <div class="grid-table__cell">31.01.2025</div>
+            <div class="grid-table__cell">
+              <div class="card__moderator">
+                <img src="./assets/imgs/sam.png" alt="moderator avatar" class="card__moderator-avatar">
+                <div class="card__moderator-info">
+                  <span class="card__moderator-name text-regular primary-blue-color">John Doe</span>
+                  <span class="card__moderator-position text-small light-color">Senior Moderator</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid-table__cell">
+              <div class="actions-block">
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/comment-text.svg" alt="comment-text.svg icon"
+                    class="actions-block__btn-icon">
+                  Comments &amp; rates
+                </button>
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/pencil-edit.svg" alt="pencil-edit.svg icon" class="actions-block__btn-icon">
+                  Edit
+                </button>
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/more-vertical.svg" alt="more-vertical.svg icon"
+                    class="actions-block__btn-icon">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-table__row">
+            <div class="grid-table__cell">
+              <div class="quiz-name-block">
+                <img class="quiz-name-block__img" src="./assets/imgs/card-preview-1.png" alt="quiz preview">
+                <button class="quiz-name-block__link-btn btn btn-bordered-outlined">
+                  <img class="quiz-name-block__link-btn-icon" src="./assets/icons/link.svg" alt="link icon" />
+                </button>
+                <h4 class="quiz-name-block__name">Quiz name. Lorem ipsum dummy - Moderation 2</h4>
+              </div>
+            </div>
+            <div class="grid-table__cell">
+              <div class="card__stat-item">
+                <div class="card__stat-item-child">
+                  <img src="./assets/icons/bar-chart.svg" alt="bar chart icon" class="card__stat-icon">
+                  <span class="card__stat-text text-regular text-small">23</span>
+                </div>
+                <div class="card__stat-item-stars">
+                  <img src="./assets/icons/filled-star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/filled-star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                </div>
+              </div>
+            </div>
+            <div class="grid-table__cell">31.01.2025</div>
+            <div class="grid-table__cell">
+              <span class="category-text">
+                History / Europe History / Ukraine
+              </span>
+            </div>
+            <div class="grid-table__cell">
+              <span class="badge badge--orange text-tiny text-bold">Moderate on 75%</span>
+            </div>
+            <div class="grid-table__cell">31.01.2025</div>
+            <div class="grid-table__cell">
+              <div class="card__moderator">
+                <img src="./assets/imgs/sam.png" alt="moderator avatar" class="card__moderator-avatar">
+                <div class="card__moderator-info">
+                  <span class="card__moderator-name text-regular primary-blue-color">John Doe</span>
+                  <span class="card__moderator-position text-small light-color">Senior Moderator</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid-table__cell">
+              <div class="actions-block">
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/comment-text.svg" alt="comment-text.svg icon"
+                    class="actions-block__btn-icon">
+                  Comments &amp; rates
+                </button>
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/pencil-edit.svg" alt="pencil-edit.svg icon" class="actions-block__btn-icon">
+                  Edit
+                </button>
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/more-vertical.svg" alt="more-vertical.svg icon"
+                    class="actions-block__btn-icon">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-table__row">
+            <div class="grid-table__cell">
+              <div class="quiz-name-block">
+                <img class="quiz-name-block__img" src="./assets/imgs/card-preview-1.png" alt="quiz preview">
+                <button class="quiz-name-block__link-btn btn btn-bordered-outlined">
+                  <img class="quiz-name-block__link-btn-icon" src="./assets/icons/link.svg" alt="link icon" />
+                </button>
+                <h4 class="quiz-name-block__name">Quiz name. Lorem ipsum dummy - Moderation 2</h4>
+              </div>
+            </div>
+            <div class="grid-table__cell">
+              <div class="card__stat-item">
+                <div class="card__stat-item-child">
+                  <img src="./assets/icons/bar-chart.svg" alt="bar chart icon" class="card__stat-icon">
+                  <span class="card__stat-text text-regular text-small">23</span>
+                </div>
+                <div class="card__stat-item-stars">
+                  <img src="./assets/icons/filled-star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/filled-star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                  <img src="./assets/icons/star.svg" alt="star icon" class="card__stat-item-star">
+                </div>
+              </div>
+            </div>
+            <div class="grid-table__cell">31.01.2025</div>
+            <div class="grid-table__cell">
+              <span class="category-text">
+                History / Europe History / Ukraine
+              </span>
+            </div>
+            <div class="grid-table__cell">
+              <span class="badge badge--orange text-tiny text-bold">Moderate on 75%</span>
+            </div>
+            <div class="grid-table__cell">31.01.2025</div>
+            <div class="grid-table__cell">
+              <div class="card__moderator">
+                <img src="./assets/imgs/sam.png" alt="moderator avatar" class="card__moderator-avatar">
+                <div class="card__moderator-info">
+                  <span class="card__moderator-name text-regular primary-blue-color">John Doe</span>
+                  <span class="card__moderator-position text-small light-color">Senior Moderator</span>
+                </div>
+              </div>
+            </div>
+            <div class="grid-table__cell">
+              <div class="actions-block">
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/comment-text.svg" alt="comment-text.svg icon"
+                    class="actions-block__btn-icon">
+                  Comments &amp; rates
+                </button>
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/pencil-edit.svg" alt="pencil-edit.svg icon" class="actions-block__btn-icon">
+                  Edit
+                </button>
+                <button class="actions-block__btn btn btn-bordered-outlined text-regular primary-blue-color">
+                  <img src="./assets/icons/more-vertical.svg" alt="more-vertical.svg icon"
+                    class="actions-block__btn-icon">
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <div class="grid-table__row grid-table__row--footer">
+            <div class="table-footer-block">
+              <div class="table-footer-block__items-per-page">
+                <span class="table-footer-block__items-per-page-text text-small light-color">
+                  Items for page
+                </span>
+                <select class="table-footer-block__items-per-page-select text-regular primary-blue-color">
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                </select>
+              </div>
+              <div class="pagination">
+                <a href="#" class="pagination__arrow-link">«</a>
+                <a href="#" class="pagination__arrow-link">‹</a>
+
+                <a href="#" class="pagination__link active text-regular primary-blue-color">1</a>
+                <a href="#" class="pagination__link text-regular primary-blue-color">2</a>
+                <a href="#" class="pagination__link text-regular primary-blue-color">3</a>
+
+                <span class="pagination__ellipsis text-regular primary-blue-color">...</span>
+
+                <a href="#" class="pagination__link text-regular primary-blue-color">25</a>
+                <a href="#" class="pagination__arrow-link">›</a>
+                <a href="#" class="pagination__arrow-link">»</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+    </main>
+  </div>
+
   <script type="module" src="src/index.js"></script>
 </body>
 
